@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Vasilis_Aliftiras</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style type="text/css">
+  /*
+   * Copyright 2013 Christophe-Marie Duquesne <chmd@chmd.fr>
+   *
+   * CSS for making a resume with pandoc. Inspired by moderncv.
+   *
+   * This CSS document is delivered to you under the CC BY-SA 3.0 License.
+   * https://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+   */
+
+  /* Whole document */
+  body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      background: #FFFFFF;
+      padding: 10px 10px 10px 10px;
+  }
+
+  /* Title of the resume */
+  h1 {
+      font-size: 55px;
+      color: #757575;
+      text-align:center;
+      margin-bottom:15px;
+  }
+  /* h1:hover { */
+  /*     background-color: #757575; */
+  /*     color: #FFFFFF; */
+  /*     text-shadow: 1px 1px 1px #333; */
+  /* } */
+
+  /* Titles of categories */
+  h2 {
+      /* This is called "sectioncolor" in the ConTeXt stylesheet. */
+      color: #397249;
+  }
+  /* There is a bar just before each category */
+  h2:before {
+      content: "";
+      display: inline-block;
+      margin-right:1%;
+      width: 16%;
+      height: 10px;
+      /* This is called "rulecolor" in the ConTeXt stylesheet. */
+      background-color: #9CB770;
+  }
+  /* h2:hover { */
+  /*     background-color: #397249; */
+  /*     color: #FFFFFF; */
+  /*     text-shadow: 1px 1px 1px #333; */
+  /* } */
+
+  /* Definitions */
+  dt {
+      float: left;
+      clear: left;
+      width: 17%;
+      font-weight: bold;
+  }
+  dd {
+      margin-left: 17%;
+      margin-bottom:7px;
+  }
+  p {
+      margin-top:0;
+      margin-bottom:7px;
+  }
+
+  /* Blockquotes */
+  blockquote {
+      text-align: center
+  }
+
+  /* Links */
+  a {
+      text-decoration: none;
+      color: #397249;
+  }
+  a:hover, a:active {
+      background-color: #397249;
+      color: #FFFFFF;
+      text-decoration: none;
+      text-shadow: 1px 1px 1px #333;
+  }
+
+  /* Horizontal separators */
+  hr {
+      color: #A6A6A6;
+  }
+
+  table {
+      width: 100%;
+  }
+  </style>
+</head>
+<body>
+<h1 id="aliftiras-vasilis">Aliftiras Vasilis</h1>
+<table>
+<tbody>
+<tr>
+<td style="text-align: left;">phone:</td>
+<td style="text-align: left;">(+30) 6973295665</td>
+</tr>
+<tr>
+<td style="text-align: left;">mail:</td>
+<td style="text-align: left;">aliftiras.v@gmail.com</td>
+</tr>
+<tr>
+<td style="text-align: left;">linkedIn:</td>
+<td style="text-align: left;"><a
+href="https://www.linkedin.com/in/basil-aliftiras" target="_blank"
+title="https://www.linkedin.com/in/basil-aliftiras">https://www.linkedin.com/in/basil-aliftiras</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">skype:</td>
+<td style="text-align: left;">aliftiras.v</td>
+</tr>
+<tr>
+<td style="text-align: left;">github:</td>
+<td style="text-align: left;"><a href="https://github.com/BasilAl"
+target="_blank"
+title="https://github.com/BasilAl">https://github.com/BasilAl</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Residence:</td>
+<td style="text-align: left;">Athens, Greece</td>
+</tr>
+<tr>
+<td style="text-align: left;">Military:</td>
+<td style="text-align: left;">Fulfilled</td>
+</tr>
+</tbody>
+</table>
+<h2 id="experience">Experience</h2>
+<dl>
+<dt><em>04/2023 - 10/2024:</em></dt>
+<dd>
+<strong>Django Developer @ INdev Software:</strong> Worked as
+a Django Web Developer at INdev Sofware where I wrote backend components
+for websites using open source tools like:
+</dd>
+<dd>
+<ul>
+<li>Python Django including the ORM, Forms and authentication
+tools.</li>
+<li>RabbitMQ for messaging</li>
+<li>Pydantic for validation and passing data objects around</li>
+<li>Pytest for testing, including Django-stub and Pytest-django for
+Django-specific fixtures</li>
+<li>JS for frontend, although that is a minor part of my job, our
+frontend and fullstack devs do the heavy lifting there</li>
+</ul>
+</dd>
+<dt><em>07/2022 - 04/2023:</em></dt>
+<dd>
+<strong>Data Engineer @ Adastra Greece:</strong> Worked as a data
+engineer at Adastra Greece where I wrote glue jobs for data analysis, as
+well as worked on some data validation tools using:
+</dd>
+<dd>
+<ul>
+<li>Python</li>
+<li>Scala</li>
+<li>AWS (Glue/Athena/Redshift etc)</li>
+</ul>
+</dd>
+<dt><em>08/2021 - 07/2022:</em></dt>
+<dd>
+<strong>Backend Developer @ Analytika CS:</strong> Worked as a Python
+backend developer at Analytika where I wrote scripts for analysing and
+transforming data and helped with deployment while learning a bit of
+DevOps using:
+</dd>
+<dd>
+<ul>
+<li>Python</li>
+<li>Postgresql</li>
+<li>Ansible</li>
+<li>Docker</li>
+</ul>
+</dd>
+<dt><em>02/2021 - 06/2021:</em></dt>
+<dd>
+<strong>Backend Developer @ Warply:</strong> Worked as a Python backend
+developer at Warply where I extended API functionalities and did some
+backend development using:
+</dd>
+<dd>
+<ul>
+<li>Python</li>
+<li>Flask</li>
+<li>Postgresql</li>
+<li>SQLAlchemy</li>
+</ul>
+</dd>
+<dt><em>02/2020 - 02/2021:</em></dt>
+<dd>
+<strong>Backend Developer @ Cognity S.A:</strong> Worked as a SOA
+backend developer for 6 months and a QA/Devops Engineer for another 6
+using:
+</dd>
+<dd>
+<ul>
+<li>JDeveloper</li>
+<li>JavaEE</li>
+<li>JavaScript</li>
+<li>Jira</li>
+</ul>
+</dd>
+<dt><em>11/2018 - 03/2019:</em></dt>
+<dd>
+<strong>Web Development Intern @ Netbee:</strong> I interned for a few
+months for a Web Development company and was taught some basics of MVC
+architecture for building .NET based websites.
+</dd>
+<dt><em>09/2016 - 09/2017:</em></dt>
+<dd>
+<strong>Production Operative @ Unilever-Walls</strong> After my army
+service I worked for a year in the UK as a production operative at the
+Walls Factory. One of my proposals for target weight optimisation has
+become standard practice on multiple factories of the same company.
+</dd>
+<dt><em>09/2011 - 06/2014:</em></dt>
+<dd>
+<strong>Mathematics Teacher @ Thalis</strong> Where I taught high school
+mathematics to small groups of students.
+</dd>
+</dl>
+<h2 id="education">Education</h2>
+<dl>
+<dt><em>2020:</em></dt>
+<dd>
+<strong>Test Automation Online Seminar</strong> 4-day seminar on Test
+Automation learning the basics of Maven, Selenium Web Driver, Cucumber
+and others.
+</dd>
+<dt><em>2019:</em></dt>
+<dd>
+<strong>Python for Data Analysis Seminar</strong> 2-day data analytics
+seminar by Kariera.gr’s Coding School, learning the Pandas, matplotlib
+and Scikit Learn libraries
+</dd>
+<dt><em>2018:</em></dt>
+<dd>
+<strong>1st International Summer School for AI and Games</strong>
+Attended the first international Summer School for AI and games
+</dd>
+<dt><em>2017:</em></dt>
+<dd>
+<strong>BSc, Mathematics</strong> University of Ioannina
+</dd>
+</dl>
+<h2 id="technical-experience">Technical Experience</h2>
+<dl>
+<dt>Programming Languages:</dt>
+<dd>
+<strong>Python:</strong> This is the main language that I use for work
+and everyday/hobby programming. I’ve used the 3 data-analysis related
+libraries (Matplotlib, Pandas, Scikit Learn) and I also have some
+experience with Flask, SQLAlchemy and Celery. I’ve also had experience
+with Django, including it’s custom ORM and Template language, as well as
+various parts of it’s admin support and testing tools.This is the
+language I feel the most comfortable using.
+</dd>
+<dd>
+<p><strong>Java:</strong> I’ve used Java on my first job but I haven’t
+written extensive code on it, was mainly doing a series of small fixes
+and updates.</p>
+</dd>
+<dd>
+<p>I’ve also done small projects with and have some basic knowledge of
+<strong>C</strong>, <strong>prolog</strong>, <strong>SQL</strong>,
+<strong>Javascript</strong> and <strong>html</strong></p>
+</dd>
+<dd>
+<p>You can see some of my university projects on my <a
+href="https://github.com/BasilAl" target="_blank"
+title="https://github.com/BasilAl">github</a></p>
+</dd>
+<dd>
+<p>I’ve also dabbled a little bit with Cryptography and occasionaly work
+on some of the <a href="https://cryptohack.org/user/Stirlitz/"
+target="_blank"
+title="https://cryptohack.org/user/Stirlitz/">Cryptohack</a>
+challenges.</p>
+</dd>
+</dl>
+<h2 id="extras">Extras</h2>
+<ul>
+<li><p>Human Languages:</p>
+<ul>
+<li>Greek (native speaker)</li>
+<li>English (Fluent speaker)</li>
+<li>German (Basic knowledge)</li>
+<li>French (Basic Knowledge)</li>
+</ul></li>
+<li><p>7 nationwide distinctions in mathematics competitions as a school
+student, including 1st place in 4 of them.</p></li>
+</ul>
+</body>
+</html>
